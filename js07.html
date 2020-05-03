@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<title>Testimonial</title>
+	<style type="text/css">
+		h1{
+			margin-top: -570px;
+		}
+		.container{
+			height: 300px;
+			border: 2px solid white;
+			margin-top: 130px;
+			background: none;
+		}
+		.card{
+			height: 100px;
+			border-radius: 50%;
+			margin-top: -50px;
+		}
+		.btn{
+			height: 40px;
+			width: 40px;
+			font-size: 40px;
+			position: absolute;
+			top: 40%;
+			font-weight: bolder;
+		}
+		.btn-left{
+			margin-left: -54%;
+		} 
+		.btn-right{
+			margin-left: 48%;
+      margin-top: 10px;
+		} 
+		span{
+			letter-spacing: 5px;
+		}
+	</style>
+</head>
+<body><center>
+	<div class="container-fluid col-md-12"><img src="https://1.bp.blogspot.com/-TZi_USLmiZo/XdOkbsA-TtI/AAAAAAAAEvQ/DuBjFF7BK4w6H8p8OtMgifbuxua9bi8oQCPcBGAYYCw/s1600/mum.jpg" height="650px" width="100%">
+		<h1 class="text-warning">CLIENT</h1>
+		<h2 class="text-light display-4 font-weight-bold">TESTIMONIAL</h2>
+		<div class="container col-md-6">
+			<a class="btn btn-left"><i class="fa fa-caret-left bg-light"></i></a>
+            <a class="btn btn-right"><i class="fa fa-caret-right bg-light"></i></a>
+			<div class="card col-md-3 img-container"></div>
+			<h3 class="text-light mt-4 heading"></h3>
+			<span><i class="fa fa-star text-warning"></i><i class="fa fa-star text-warning"></i><i class="fa fa-star text-warning"></i><i class="fa fa-star text-warning"></i><i class="fa fa-star-half text-warning"></i></span>
+			<h3 class="text-light mt-2 sub-heading"></h3>
+			<i class="fa fa-quote-left text-warning mt-4" aria-hidden="true" style="font-size:46px"></i>
+
+		</div>
+	</div></center>
+
+	<script>
+      (function(){
+      const pics = ['https://1.bp.blogspot.com/-S-u34fZv1aw/XP-y47YZhHI/AAAAAAAAAbY/JqmWWI2br8A6LhYzTjBai4gnoJnkHQfwgCPcBGAYYCw/s200/ipad.jpg','https://1.bp.blogspot.com/-bHW9TdHhFqg/XQHo3_inUjI/AAAAAAAAAek/RYF2PNiy82kyGASgcElkj7AQjilM6gjuwCPcBGAYYCw/s200/pic.jpg','https://1.bp.blogspot.com/-64AD4AehphY/XQtxUu8v-JI/AAAAAAAAAlU/FJ3tBVdHS_o2_jk1gnGdxjsA0yybAnzSACPcBGAYYCw/s200/g.jpg','https://1.bp.blogspot.com/-JtbvZVReaFs/XXE1gtVCkmI/AAAAAAAACfI/vsKjwd-nMiYdRMB4zFgZ6f515khmA5FowCPcBGAYYCw/s200/usha%2Bjha.jpg','https://1.bp.blogspot.com/-04OZ14P2MSM/XX8ukBYgQtI/AAAAAAAAC8o/0Jj57hhuZFI1p2N-B_0nd71ujw8lQP4NgCPcBGAYYCw/s200/WhatsApp%2BImage%2B2019-09-16%2Bat%2B7.56.19%2BAM.jpeg','https://1.bp.blogspot.com/-Zy_VgVAeLFU/XcAopPXiEkI/AAAAAAAAEPo/ZMc03XAIWeYFiCJxDNcv7WUK5dVN2FQiACPcBGAYYCw/s200/b.jpg'];
+
+      const names = ['Dalai Lama', 'Stephen King', 'Mae West', 'Albert Einstein', 'Babe Ruth', 'Ernest Hemingway'];
+
+      const lines = ['The purpose of our lives is to be happy.', ' Get busy living or get busy dying.', 'You only live once, but if you do it right, once is enough.', 'If you want to live a happy life, tie it to a goal, not to people or things.', 'Never let the fear of striking out keep you from playing the game.', 'Not how long, but how well you have lived is the main thing.'];
+      
+      const buttons = document.querySelectorAll('.btn')
+      const imageDIV = document.querySelector('.img-container')
+      let count = 0
+      const heading = document.querySelector('.heading')
+      let count1 = 0
+      const subheading = document.querySelector('.sub-heading')
+      let count2 = 0
+
+      imageDIV.style.backgroundImage = `url('${pics[count]}')`
+
+      buttons.forEach(function(button){
+        button.addEventListener('click', function(){
+          if (button.classList.contains('btn-left')){
+            count--
+            if (count < 0) {
+              count = pics.length -1
+            }
+            imageDIV.style.backgroundImage = `url('${pics[count]}')`
+          }
+          if (button.classList.contains('btn-right')){
+            count++
+            if (count > pics.length -1) {
+              count = 0
+            }
+            imageDIV.style.backgroundImage = `url('${pics[count]}')`
+          }
+
+        })
+      })
+
+      heading.textContent = `${names[count1]}`
+
+      buttons.forEach(function(button){
+        button.addEventListener('click', function(){
+          if (button.classList.contains('btn-left')){
+            count1--
+            if (count1 < 0) {
+              count1 = names.length -1
+            }
+            heading.textContent = `${names[count1]}`
+          }
+          if (button.classList.contains('btn-right')){
+            count1++
+            if (count1 > names.length -1) {
+              count1 = 0
+            }
+            heading.textContent = `${names[count1]}`
+          }
+
+        })
+      })
+
+
+subheading.textContent = `${lines[count2]}`
+
+      buttons.forEach(function(button){
+        button.addEventListener('click', function(){
+          if (button.classList.contains('btn-left')){
+            count2--
+            if (count2 < 0) {
+              count2 = lines.length -1
+            }
+            subheading.textContent = `${lines[count2]}`
+          }
+          if (button.classList.contains('btn-right')){
+            count2++
+            if (count2 > lines.length -1) {
+              count2 = 0
+            }
+            subheading.textContent = `${lines[count2]}`
+          }
+
+        })
+      })
+
+    })();
+  </script>
+
+</body>
+</html>
