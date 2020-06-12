@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		#sky{
+			height: 400px;
+			width: 100%;
+			background: #6A5ACD;
+		}
+		#moon{
+			height: 100px;
+			width: 100px;
+			background: white;
+			border-radius: 50%;
+			margin-left: 85%;
+			margin-top: 7%;
+		}
+		#sea{
+			height: 350px;
+			width: 100%;
+			background: linear-gradient(#00ffff 20%, #6A5ACD 80%);
+		}
+		#m1{
+			height: 0px;
+			width: 0px;
+			border-bottom: solid 150px #483D8B;
+			border-left: solid 150px transparent;
+			border-top: solid 150px transparent;
+			border-right: solid 150px transparent;
+			margin-top: -316px;
+			margin-left: 50%;
+			opacity: 0.8;
+		}
+	    #m2{
+			height: 0px;
+			width: 0px;
+			border-bottom: solid 130px  #483D8B;
+			border-left: solid 130px transparent;
+			border-top: solid 130px transparent;
+			border-right: solid 130px transparent;
+			margin-top: -264px;
+			margin-left: 80%;
+			opacity: 0.8;
+		}
+		#m3{
+			height: 0px;
+			width: 0px;
+			border-bottom: solid 120px #483D8B;
+			border-left: solid 120px transparent;
+			border-top: solid 120px transparent;
+			border-right: solid 120px transparent;
+			margin-top: -238px;
+			margin-left: 66%;
+			opacity: 0.8;
+		}
+		#m4{
+			height: 0px;
+			width: 0px;
+			border-bottom: solid 100px #483D8B;
+			border-left: solid 100px transparent;
+			border-top: solid 100px transparent;
+			border-right: solid 100px transparent;
+			margin-top: -200px;
+			margin-left: 73%;			
+			opacity: 0.8;
+		}
+		#boat{
+			height: 25px;
+			width: 60px;
+			background: #483D8B;
+			margin-left: 710px;
+			margin-top: 15%;
+			border-bottom-left-radius: 20px;
+			border-bottom-right-radius: 10px;
+			animation: move 8s linear infinite;
+		}
+		#b1{
+			height: 0px;
+			width: 0px;
+			border-bottom: solid 45px #483D8B;
+			border-left: solid 30px transparent;
+			border-top: solid 5px transparent;
+			border-right: solid 0px transparent;
+			margin-top: -80px;
+			margin-left: 711px;
+			animation: move 8s linear infinite;
+        }
+	    #b2{
+			height: 0px;
+			width: 0px;
+			border-bottom: solid 45px #483D8B;
+			border-left: solid 0px transparent;
+			border-top: solid 5px transparent;
+			border-right: solid 20px transparent;
+			margin-top: -50px;
+			margin-left: 745px;
+			animation: move 8s linear infinite;
+		}
+		@keyframes move{
+			0%{
+				transform: translate(0px, 0px);
+			}
+			100%{
+				transform: translate(-500px, 0px);
+			}
+		}
+		#z{
+            height: 50px;
+			width: 250px;
+			border-bottom: solid 45px #483D8B;
+			border-left: solid 0px transparent;
+			border-top: solid 0px transparent;
+			border-right: solid 20px transparent;
+			margin-top: 60px;
+        }
+		#main{
+			height: 500px;
+			width: 100px;
+			background: white;
+			margin-top: -545px;
+			margin-left: 120px;
+		}
+		.p1{
+            height: 0px;
+			width: 0px;
+			border-top: solid 100px #483d8b;
+			border-left: solid 0px transparent;
+			border-bottom: solid 100px transparent;
+			border-right: solid 100px transparent;
+		}
+		.p2{
+            height: 0px;
+			width: 0px;
+			border-top: solid 100px #483d8b;
+			border-left: solid 0px transparent;
+			border-bottom: solid 100px transparent;
+			border-right: solid 100px transparent;
+		}
+		.p3{
+            height: 0px;
+			width: 0px;
+			border-top: solid 100px #483d8b;
+			border-left: solid 0px transparent;
+			border-bottom: solid 100px transparent;
+			border-right: solid 100px transparent;
+		}
+		.p4{
+            height: 0px;
+			width: 0px;
+			border-bottom: solid 100px #483d8b;
+			border-left: solid 100px transparent;
+			border-top: solid 100px transparent;
+			border-right: solid 0px transparent;
+			margin-top: -400px;
+		}
+		.p5{
+            height: 0px;
+			width: 0px;
+			border-bottom: solid 100px #483d8b;
+			border-left: solid 100px transparent;
+			border-top: solid 100px transparent;
+			border-right: solid 0px transparent;
+			margin-top: -400px;
+		}
+		#t1{
+			height: 20px;
+			width: 100px;
+			background: white;
+			border: 2px solid black;
+			margin-top: -524px;
+			margin-left: 118px;
+		}
+		.x{
+			height: 50px;
+			width: 21px;
+			background: white;
+			border: 2px solid black;
+		}
+		.one{
+			margin-top: -77px;
+			margin-left: 120px;
+		}
+		.two{
+			margin-top: -54px;
+			margin-left: 145px;
+		}
+		.three{
+			margin-top: -54px;
+			margin-left: 170px;
+		}
+		.four{
+			margin-top: -54px;
+			margin-left: 195px;
+		}
+		#triangle{
+			height: 0px;
+			width: 0px;
+			border-bottom: solid 50px  #483d8b ;
+			border-left: solid 65px transparent;
+			border-top: solid 65px transparent;
+			border-right: solid 65px transparent;
+			margin-top: -168px;
+			margin-left: 104px;
+		}
+		#circle{
+			height: 20px;
+			width: 20px;
+			border-radius: 50%;
+			background:  #483d8b;
+			margin-left: 160px;
+			margin-top: -62px; 
+		}
+		#line{
+			height: 30px;
+			width: 5px;
+			background: #483D8B;
+			border-radius: 10px;
+			margin-left: 167px;
+			margin-top: -37px; 
+		}
+		#light{
+			height: 70px;
+			width: 70%;
+			margin-left: 220px;
+			margin-top: 50px;
+			transform-style: preserve-3d;
+			transform-origin: left center;
+			transform: perspective(500px) rotateY(-35deg);
+			background: linear-gradient(90deg, #f7f2b4 40%, rgba(255, 255, 255, 0) 100%);
+			animation: abc 5s linear infinite;
+		}
+		@keyframes abc{
+			25%{
+				transform: perspective(30px);
+			}
+			75%{
+				transform: perspective(300px);
+			}
+			100%{
+				transform: perspective(500px);
+			}
+		}
+	</style>
+</head>
+<body>
+   <div id="sky"><br>
+   	<div id="moon"></div>
+   </div>
+   <div id="sea"><br>
+   	<div id="m1"></div>
+   	<div id="m2"></div>
+   	<div id="m3"></div>
+   	<div id="m4"></div>
+   	<div id="boat"></div>
+   	<div id="b1"></div>
+   	<div id="b2"></div>
+   	<div id="z"></div>
+   	<div id="main">
+   	<div class="p1"></div>
+   	<div class="p2"></div>
+   	<div class="p3"></div>
+    <div class="p4"></div>
+   	<div class="p5"></div>
+   </div>
+   <div id="t1"></div>
+   <div class="x one"></div>
+   <div class="x two"></div>
+   <div class="x three"></div>
+   <div class="x four"></div>
+   <div id="triangle"></div>
+   <div id="circle"></div>
+   <div id="line"></div>
+   <div id="light"></div>
+   </div>
+   
+</body>
+</html>
